@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+form {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.25);
+}
+h1 {
+    margin: 0;
+    color: #6066FF;
+    font-family: Inter;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#allForms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 352px;
+}
+.grouped {
+    display: flex;
+    width: 90%;
+    margin: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.solo {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 10px;
+}
+label {
+    display: flex;
+    width: 100%;
+    padding: 0px 10px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+input {
+    display: flex;
+    width: 302px;
+    height: 30px;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 10px;
+    border: 2px solid #6066FF;
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#submit {
+    display: flex;
+    width: 75%;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #6066FF;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#submit:active {
+    background: #777cff;
+}
