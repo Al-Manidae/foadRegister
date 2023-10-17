@@ -8,32 +8,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="get" onsubmit="register()">
+    <form method="get" onsubmit="enregistrement()">
         <h1>Register</h1>
         <div id="allForms">
             <div class="grouped">
                 <div class="solo">
-                    <label for="nom">Nom</label>
+                    <div class="line">
+                        <label for="nom">Nom</label>
+                        <p id="checkNom" class="hidden">champ requis</p>
+                    </div>
                     <input type="text" name="nom" id="nom" placeholder="Nom">
                 </div>
-                <div class="solo">                    
+                <div class="solo">
+                    <div class="line">
                     <label for="prenom">Prénom</label>
+                    <p id="checkPrenom" class="hidden">champ requis</p>
+                </div>
                     <input type="text" name="prenom" id="prenom" placeholder="Prénom">
                 </div>                
             </div>
             <div class="grouped">
                 <div class="solo">
+                    <div class="line">
                     <label for="mail">E-mail</label>
+                    <p id="checkMail" class="hidden">champ requis</p>
+                </div>
                     <input type="email" name="mail" id="mail" placeholder="E-mail">
                 </div>
             </div>
             <div class="grouped">
                 <div class="solo">
+                    <div class="line">
                     <label for="passWord">Mot de passe</label>
+                    <p id="checkMdp" class="hidden">champ requis</p>
+                </div>
                     <input type="password" name="passWord" id="passWord" placeholder="Mot de passe">                    
                 </div>
                 <div class="solo">
+                    <div class="line">
                     <label for="passWordConfirm">Confirmez le mot de passe</label>
+                    <p id="checkMdpConfirm" class="hidden">champ requis</p>
+                </div>
                     <input type="password" name="passWordConfirm" id="passWordConfirm" placeholder="Confirmez le mot de passe">                    
                 </div>                
             </div>
