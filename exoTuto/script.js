@@ -133,13 +133,14 @@ form.addEventListener('submit',function(e){
                     isPasswordValid &&
                     isConfirmPasswordValid;
     
-    if (isFormValid) {
+    if (isFormValid==false) {
+        e.preventDefault();
+    }else{
+        // localStorage -----------------------------
+        let usernameVal =document.getElementById("username").value;
+        let mailVal =document.getElementById("email").value;
+        //envoie dans le localStorage
+        localStorage.setItem("nom",usernameVal);
+        localStorage.setItem("mail",mailVal);
     }
 });
-
-// localStorage -----------------------------
-let usernameVal =document.getElementById("username").value;
-let mailVal =document.getElementById("email").value;
-//envoie dans le localStorage
-localStorage.setItem("nom",usernameVal);
-localStorage.setItem("mail",mailVal);
