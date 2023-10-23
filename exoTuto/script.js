@@ -138,9 +138,14 @@ form.addEventListener('submit',function(e){
     }else{
         // localStorage -----------------------------
         let usernameVal =document.getElementById("username").value;
-        let mailVal =document.getElementById("email").value;
+        let passWord =password.value;
+        let dateLogIn = new Date();
         //envoie dans le localStorage
         localStorage.setItem("nom",usernameVal);
-        localStorage.setItem("mail",mailVal);
+        localStorage.setItem("passWord",passWord);
+        localStorage.setItem("dateLogIn",dateLogIn);
+        console.log(localStorage.getItem('nom'));
+        console.log(localStorage.getItem('passWord'));
+        window.location.href = "logIn.html";
     }
 });
