@@ -5,24 +5,17 @@ const localPassword = localStorage.getItem('passWord');
 
 const form = document.querySelector('#signup');
 
-// Fonctions fléchées ------------------------
 const isRequired = value => value === '' ? false : true;
-// if (value === "") {
-//     false
-// } else {
-//     true
-// }
-// remplacé par 1 ligne
-// “?” est un if et le “:” est else
-const isBetween =(length,min,max)=>length<min || length>max ? false : true;
 
 // Show errors -------------------------------
 const showError = (input, message)=>{
 // reprendre le form-field element
     const formField = input.parentElement;
+    console.log(input);
+    console.log(formField);
 // ajouter la class error et supprimer la class success
-    formField.classList.remove('success');
     formField.classList.add('error');
+    formField.classList.remove('success');
 // afficher le message d'erreur
     const error = formField.querySelector('small');
     error.textContent = message;
@@ -33,15 +26,12 @@ const showSuccess = (input) => {
 // reprendre le form-field element
     const formField = input.parentElement;
 // ajouter la class success et supprimer la class error
-    formField.classList.remove('error');
     formField.classList.add('success');
+    formField.classList.remove('error');
 // cacher le message d'erreur
     const error = formField.querySelector('small');
     error.textContent = '';
 }
-
-// const usernameEl = document.querySelector('#username');
-// const localNom = localStorage.getItem('nom');
 
 // Verification du nom -----------------------
 const checkUsername = () => {
@@ -50,18 +40,15 @@ const checkUsername = () => {
     const username = usernameEl.value.trim();
     
     if (!isRequired(username)) {
-        showError(username, 'Entrez votre nom');
+        showError(usernameEl, 'Entrez votre nom');
     } else if (localNom !== username) {
-        showError(username, "Nom invalide");
+        showError(usernameEl, "Nom invalide");
     } else {
-        showSuccess(username);
+        showSuccess(usernameEl);
         valid = true;
     }
     return valid;
 }
-
-// const passwordEl = document.querySelector('#password');
-// const localPassword = localStorage.getItem('passWord');
 
 // Verification du mdp -----------------------
 const checkPassword = () => {
@@ -70,11 +57,11 @@ const checkPassword = () => {
     const password = passwordEl.value.trim();
     
     if (!isRequired(password)) {
-        showError(password, 'Entrez votre Mot de passe');
+        showError(passwordEl, 'Entrez votre Mot de passe');
     } else if (localPassword !== password) {
-        showError(password, "Mot de passe invalide");
+        showError(passwordEl, "Mot de passe invalide");
     } else {
-        showSuccess(password);
+        showSuccess(passwordEl);
         valid = true;
     }
     return valid;
@@ -98,6 +85,6 @@ form.addEventListener('submit',function(e){
         let dateLogIn = new Date();
         //envoie dans le localStorage
         localStorage.setItem("dateLogIn",dateLogIn);
-        // window.location.href = "logIn.html";
+        window.location.href = "localDisplay.html";
     }
 });

@@ -1,9 +1,6 @@
 // Récupérer le nom
 let nom = localStorage.getItem('nom');
 
-//Récupération du mail
-let adressMail = localStorage.getItem('mail');
-
 //Récupération de la date
 let dateLogIn = new Date(localStorage.getItem('dateLogIn'));
 
